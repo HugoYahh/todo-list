@@ -8,16 +8,64 @@
 <script defer src="main.js"></script></head>
 <body>
     <div id="container">
-        <aside>
+        <aside class="sidebar">
            <div class="sidebar-header">
-                <div class="sidebar-header-left">
-                    <span>ToDoList</span>
+                <div id="sidebar-header-left">
+                    <span id="header-left-logo"></span>
+                    <span id="header-span-left">ToDoList</span>
                 </div>
-                <div class="sidebar-header-right">
-                    
+                <div id="sidebar-header-right">
+                    <span id="header-span-right"></span>
                 </div>
            </div> 
+
+           <div class="sidebar-menu">
+                <ul class="menu-list">
+                    <div class="menu-item-group">
+                        <span id="inbox-logo"></span>
+                        <li class="menu-item" id="inbox">Inbox</li>
+                    </div>
+                    <div class="menu-item-group">
+                        <span id="today-logo"></span>
+                        <li class="menu-item"id="today" class="active">Today</li>
+                    </div>
+                    <div class="menu-item-group">
+                        <span id="upcoming-logo"></span>
+                        <li class="menu-item"id="upcoming">Upcoming</li>
+                    </div>
+                    <div class="menu-item-group">
+                        <span id="anytime-logo"></span>
+                        <li class="menu-item"id="anytime">Anytime</li>
+                    </div>
+                    <div class="menu-item-group">
+                        <span id="someday-logo"></span>
+                        <li class="menu-item"id="someday">Someday</li>
+                    </div>
+                </ul>
+           </div>
+
+           <div class="sidebar-projects">
+                <ul class="projects-list">
+                    <li class="project-item-group">
+                        <div class="project-header">
+                            <span id="project-logo"></span>
+                            <span class="project-name">Default Project</span>
+                        </div>
+
+                        <ul class="project-tasks-list">
+                        <li class="task-item-group">
+                            <span id="task-logo"></span>
+                            <span class="task-name">Default Task</span>
+                        </li>
+                        </ul>
+                    </li>
+                    </ul>
+           </div>
+
         </aside>
+        <main >
+            <p class="main-content"></p>
+        </main>
     </div>
 </body>
 </html>

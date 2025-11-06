@@ -65,43 +65,44 @@
         </aside>
         <main >
             <div class="main-content">
-                <section id="today-section">
-                    <h1 class="today-title">Today's Tasks</h1>
-                    <h2>My Projects</h2>
-                    <div class="tasks-group">
-                        <div class="task-item">
-                            <div class="task-item-top">
-                                <div class="task-item-top-left">
-                                    <input type="checkbox" class="task-done task-component">
-                                    <span class="description task-component">Description plus ou moins longue</span>
-                                </div>
-                                <span class="priority task-component">Medium</span>
-                            </div>
-                            <div class="task-item-bottom">
-                                <span class="due-date task-component">2025-11-07</span>
-                        
-                        
-                            </div>
-                        </div>
-                        <div class="task-item">
-                            <div class="task-item-top">
-                                <div class="task-item-top-left">
-                                    <input type="checkbox" class="task-done task-component">
-                                    <span class="description task-component">Description</span>
-                                </div>
-                                <span class="priority task-component">Medium</span>
-                            </div>
-                            <div class="task-item-bottom">
-                                <span class="due-date task-component">2025-11-07</span>
-                        
-                        
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
+               
             </div>
         </main>
+    </div>
+    <div class="overlay hidden">
+        <div class="modal">
+            <h2>Add New Task</h2>
+            <form id="add-task-form">
+                <label for="task-name">
+                    Name 
+                    <input type="text" id="task-name" required>
+                </label>
+
+                <label for="">
+                    Description
+                    <textarea name="" id="task-desc" rows="2"></textarea>
+                </label>
+
+                <label for="">
+                    Due Date
+                    <input type="date" id="task-date" required>
+                </label>
+
+                <label for="">
+                    Priority
+                    <select name="" id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit">Add Task</button>
+                    <button type="button" id="cancel-task">Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

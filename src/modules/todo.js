@@ -6,10 +6,10 @@ export default function createToDo(name,description,dueDate,priority,completionS
         priority,
         completionStatus,
         isCompleted(){
-            return this.isCompleted;
+            return this.completionStatus;
         },
         toggleComplete(){
-            this.isCompleted=!this.isCompleted;
+            this.completionStatus=!this.completionStatus;
         }
     };
 }

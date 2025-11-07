@@ -34,14 +34,15 @@ function getTodayTasks() {
   return todayTasks;
 }
 
-if (projects.length === 0) {
-  addProject('Inbox', 'Toutes les tâches non classées.');
+function initDefaultProject() {
+  if (projects.length === 0) {
+    addProject('Inbox', 'Toutes les tâches non classées.');
+  }
 }
-
-// 👇 export unique, clair et compatible avec ton import default
 export default {
   addProject,
   removeProject,
   getAllProjects,
   getTodayTasks,
+  initDefaultProject,
 };

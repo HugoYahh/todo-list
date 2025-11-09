@@ -1,7 +1,8 @@
 import ProjectManager from './projectManager.js';
-import openAddTaskForm from './form.js';
+import Form from './form.js';
 import Storage from './storage.js';
 import createToDo from './todo.js';
+import renderSidebarProjects from './sidebar.js';
 
 export default function loadView(viewName) {
   const main = document.querySelector(".main-content");
@@ -106,6 +107,7 @@ export function renderToday() {
         }
         Storage.saveProjects();
         refreshToday();
+        renderSidebarProjects();
       });
 
       // 🔹 Edit button (ouvre un modal pré-rempli)
@@ -132,7 +134,7 @@ export function renderToday() {
   const addBtn = document.createElement('button');
   addBtn.textContent = '+ Add Task';
   addBtn.classList.add('add-task-btn');
-  addBtn.addEventListener('click', openAddTaskForm);
+  addBtn.addEventListener('click', Form.openAddTaskForm);
   section.appendChild(addBtn);
 
   return section;

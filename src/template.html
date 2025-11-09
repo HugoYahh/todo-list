@@ -22,10 +22,6 @@
            <div class="sidebar-menu">
                 <ul class="menu-list">
                     <div class="menu-item-group">
-                        <span id="inbox-logo"></span>
-                        <li class="menu-item" id="inbox">Inbox</li>
-                    </div>
-                    <div class="menu-item-group">
                         <span id="today-logo"></span>
                         <li class="menu-item"id="today" class="active">Today</li>
                     </div>
@@ -45,21 +41,11 @@
            </div>
 
            <div class="sidebar-projects">
-                <ul class="projects-list">
-                    <li class="project-item-group">
-                        <div class="project-header">
-                            <span id="project-logo"></span>
-                            <span class="project-name">Default Project</span>
-                        </div>
+                <ul class="projects-list" id="projects-list">
+                    
+                </ul>
 
-                        <ul class="project-tasks-list">
-                        <li class="task-item-group">
-                            <span id="task-logo"></span>
-                            <span class="task-name">Default Task</span>
-                        </li>
-                        </ul>
-                    </li>
-                    </ul>
+                <button id="add-project-btn" class="sidebar-btn">+ Add Project</button>
            </div>
 
         </aside>
@@ -69,40 +55,6 @@
             </div>
         </main>
     </div>
-    <div class="overlay hidden">
-        <div class="modal">
-            <h2>Add New Task</h2>
-            <form id="add-task-form">
-                <label for="task-name">
-                    Name 
-                    <input type="text" id="task-name" required>
-                </label>
-
-                <label for="">
-                    Description
-                    <textarea name="" id="task-desc" rows="2"></textarea>
-                </label>
-
-                <label for="">
-                    Due Date
-                    <input type="date" id="task-date" required>
-                </label>
-
-                <label for="">
-                    Priority
-                    <select name="" id="task-priority">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                </label>
-
-                <div class="form-actions">
-                    <button type="submit">Add Task</button>
-                    <button type="button" id="cancel-task">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
+   
 </body>
 </html>

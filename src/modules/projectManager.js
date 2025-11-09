@@ -18,14 +18,14 @@ function getAllProjects() {
 }
 
 function getTodayTasks() {
+  const today = new Date().toISOString().slice(0, 10); // ex: "2025-11-08"
   const todayTasks = [];
 
   projects.forEach(project => {
-    // ⬇️ Amélioration de la vérification ici ⬇️
-    if (!project.tasks || !Array.isArray(project.tasks)) return; 
+    if (!project.tasks || !Array.isArray(project.tasks)) return;
     
     project.tasks.forEach(task => {
-      if (task.dueDate && isToday(parseISO(task.dueDate))) {
+      if (task.dueDate === today) {
         todayTasks.push(task);
       }
     });
@@ -36,7 +36,7 @@ function getTodayTasks() {
 
 function initDefaultProject() {
   if (projects.length === 0) {
-    addProject('Inbox', 'Toutes les tâches non classées.');
+    addProject('Random Tasks', 'Toutes les tâches non classées.');
   }
 }
 export default {

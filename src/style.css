@@ -124,6 +124,11 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-menu,.sidebar-projects{
     display: flex;
     padding: 0rem 2.7rem;
+    
+}
+
+.sidebar-projects{
+    flex-direction: column;
 }
 
 #inbox-logo::before, 
@@ -314,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-#add-task-form, #edit-task-form{
+#add-task-form, #edit-task-form, #add-project-form{
     display: flex;
     flex-direction: column;
     justify-content: center;

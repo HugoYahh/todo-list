@@ -95,6 +95,7 @@ export function renderToday() {
       // 🔹 Delete button
       const deleteButton = document.createElement('button');
       deleteButton.classList.add('bottom-right-btn', 'delete-btn');
+      deleteButton.id="delete-btn"
       deleteButton.textContent = 'Delete';
       deleteButton.addEventListener('click', () => {
         const projects = ProjectManager.getAllProjects();
@@ -113,6 +114,7 @@ export function renderToday() {
       // 🔹 Edit button (ouvre un modal pré-rempli)
       const editButton = document.createElement('button');
       editButton.classList.add('bottom-right-btn', 'edit-btn');
+      editButton.id="edit-btn"
       editButton.textContent = 'Edit';
       editButton.addEventListener('click', () => openEditModal(task));
 

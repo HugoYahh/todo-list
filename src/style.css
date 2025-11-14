@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 /* 3. Enable keyword animations */
@@ -196,6 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-item-group{
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 
 }
 
@@ -228,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     padding-left: 2rem; 
-    margin-top: 0.5rem;
+    
 }
 
 .main-content{
@@ -400,10 +402,16 @@ h1, h2, h3, h4, h5, h6 {
     right: 2rem;
 }
 
+
+
 .bottom-right button{
     padding: 0.2rem;
     border-radius: 6px;
     border: 1px solid black;
+}
+
+#add-project-btn{
+    margin-top: 2rem;
 }
 
 .high{
@@ -416,4 +424,56 @@ h1, h2, h3, h4, h5, h6 {
 
 .low{
     color: green;
+}
+
+
+
+
+
+
+/* CSS */
+button {
+  appearance: none;
+  background-color: #DEDED1;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #1A1A1A;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#edit-btn, #delete-btn{
+    padding: 0.5rem 1rem;
+    text-align: center;
 }
